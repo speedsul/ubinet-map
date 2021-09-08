@@ -273,3 +273,50 @@ export const Cte = () => {
 };
 
 export default Logo;
+
+export const IconView = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M4 6h16M4 10h16M4 14h16M4 18h16"
+    />
+  </svg>
+);
+export const IconCte = ({ tamanho = 7 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={`h-${tamanho} w-${tamanho}`}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      fillRule="evenodd"
+      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+export const IconCto = ({ tamanho = 7 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={`h-${tamanho} w-${tamanho}`}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      fillRule="evenodd"
+      d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z"
+      clipRule="evenodd"
+    />
+  </svg>
+);

@@ -1,7 +1,12 @@
 import GoogleMapReact from "google-map-react";
+import { useContext, useState } from "react";
+import { ActiveContext } from "./data/ActiveContext";
 import { MarkerMap } from "./MarkerMap";
 
 export default function Maps(props) {
+  const { cto } = useContext(ActiveContext);
+  const [data, setData] = useState([]);
+  console.log(data);
   const defaultProps = {
     center: {
       lat: -29.589622,
@@ -21,11 +26,9 @@ export default function Maps(props) {
         bootstrapURLKeys={{ key: "AIzaSyCJL1ThvqqsnBpZtJljsXnQixYc2QA5SJU" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
-        onClick={(e) => console.log(e)}
+        onClick={(e) => setData({ lat: e.lat, log: e.lng, type: cto, ...data })}
       >
-        <MarkerMap lat={-29.589622} lng={-50.808668} />
-        <MarkerMap lat={-29.591898403622153} lng={-50.809097153442394} />
-        <MarkerMap lat={-29.596227160610262} lng={-50.805578095214855} />
+        <MarkerMap lat={data.lat} lng={data.log} />
       </GoogleMapReact>
     </div>
   );
