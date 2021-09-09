@@ -1,9 +1,9 @@
-import { SvgCto } from "../Icon";
+import Modal from "../Modal";
 
 export default function About() {
   return (
-    <div>
-      <SvgCto />
+    <div className="flex z-50">
+      <Modal />
     </div>
   );
 }
