@@ -7,7 +7,7 @@ const Actions = () => {
 
   return (
     <ul className="flex flex-col mt-10 p-4 relative z-30">
-      <h2 className="flex w-full uppercase mb-4">Adicionar </h2>
+      <h2 className="flex w-full uppercase mb-4">Adicionar {cto}</h2>
       <hr className=" flex w-full border-t-2 px-5" />
       <li
         className={`cursor-pointer flex items-center ${

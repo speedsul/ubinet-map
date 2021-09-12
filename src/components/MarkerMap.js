@@ -1,6 +1,7 @@
 import { Cte } from "./Icon";
 import { useState } from "react";
 export const MarkerMap = (props) => {
+  const type = props.data.type;
   const [show, setShow] = useState(false);
 
   return (
@@ -13,13 +14,16 @@ export const MarkerMap = (props) => {
           <li>{props.data.name}</li>
           <li>{props.data.marca}</li>
           <li>{props.data.capacidade}</li>
-          <li>{props.data.type}</li>
+          <li>{type}</li>
           <li>{props.data.color}</li>
           <li>{props.data.status}</li>
           <li>{props.data.show}</li>
         </ul>
       </div>
-      <span onClick={() => setShow(!show)}>
+      <span
+        onClick={() => setShow(!show)}
+        className={`${type === "CTO" ? "text-green-400" : "text-blue-600"}`}
+      >
         <Cte />
       </span>
     </div>

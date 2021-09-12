@@ -50,7 +50,11 @@ export default function Maps(props) {
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
+        yesIWantToUseGoogleMapApiInternals
+        onDrag={(e) => console.log(e)}
+        onDragEnd={(e) => console.log(e)}
         onClick={(e) => newCto(e.lat, e.lng)}
+        onMapTypeId="satellite"
       >
         {data?.map((d) => (
           <MarkerMap lat={d.lat} lng={d.lng} key={d.id} cto={cto} data={d} />
