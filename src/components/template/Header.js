@@ -18,7 +18,10 @@ export function Header() {
             <Link to="/caixa-de-emenda">Caixa de Emenda</Link>
           </li>
           <li className=" mx-4 px-4">
-            <Link to="/users">Users</Link>
+            <Link to="/page-map-box">Map Box</Link>
+          </li>
+          <li className=" mx-4 px-4">
+            <Link to="/page-draw-map">Draw Map</Link>
           </li>
         </ul>
       </nav>
