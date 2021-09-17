@@ -1,3 +1,7 @@
+import mapEscuro from "../images/escuro.png";
+import mapSatelite from "../images/satelite.png";
+import mapClaro from "../images/claro.png";
+import mapEstrada from "../images/estrada.png";
 function Logo(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" {...props}>
@@ -319,4 +323,22 @@ export const IconCto = ({ tamanho = 7 }) => (
       clipRule="evenodd"
     />
   </svg>
+);
+export const IconMap = ({ tipo = "claro", alt }) => (
+  <div>
+    <img
+      className="w-10 hover:opacity-50"
+      title={alt}
+      src={
+        tipo === "satelite"
+          ? mapSatelite
+          : tipo === "escuro"
+          ? mapEscuro
+          : tipo === "claro"
+          ? mapClaro
+          : mapEstrada
+      }
+      alt={alt}
+    />
+  </div>
 );

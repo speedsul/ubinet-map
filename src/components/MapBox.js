@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 
 import MapGL from "react-map-gl";
 import MarkerMapBox from "./mapBox/MarkerMapbox";
@@ -24,17 +24,7 @@ export default function MapBox() {
     </MapGL>
   );
 
-  useEffect(() => {
-    console.log(mapType);
-    renderMap();
-  });
-
   //https://docs.mapbox.com/api/maps/styles/
 
-  return (
-    <div className="flex w-full h-screen">
-      <span>{mapType}</span>
-      {renderMap()}
-    </div>
-  );
+  return <div className="flex w-full h-screen">{renderMap()}</div>;
 }

@@ -1235,6 +1235,61 @@
       "color": "black",
       "status": "true",
       "id": "bjJ5OCO"
+    },
+    {
+      "name": "CTO 02",
+      "marca": "filco",
+      "capacidade": 16,
+      "lat": -29.577809999342765,
+      "lng": -50.81068502117921,
+      "type": "cto",
+      "color": "black",
+      "status": "true",
+      "id": "waY6ciW"
+    },
+    {
+      "name": "CTO 02",
+      "marca": "filco",
+      "capacidade": 16,
+      "lat": -29.577735353553113,
+      "lng": -50.81325994183351,
+      "type": "cto",
+      "color": "black",
+      "status": "true",
+      "id": "wBcARbe"
+    },
+    {
+      "name": "CTO 02",
+      "marca": "filco",
+      "capacidade": 16,
+      "lat": -29.577511415852914,
+      "lng": -50.81536279370118,
+      "type": "cte",
+      "color": "black",
+      "status": "true",
+      "id": "yeCchUb"
+    },
+    {
+      "name": "CTO 02",
+      "marca": "filco",
+      "capacidade": 16,
+      "lat": -29.576615660084652,
+      "lng": -50.81789479901124,
+      "type": "cte",
+      "color": "black",
+      "status": "true",
+      "id": "-1glRXH"
+    },
+    {
+      "name": "CTO 02",
+      "marca": "filco",
+      "capacidade": 16,
+      "lat": -29.580161313463645,
+      "lng": -50.81802354504396,
+      "type": "cte",
+      "color": "black",
+      "status": "true",
+      "id": "u-QeTl4"
     }
   ]
 }
