@@ -1,12 +1,13 @@
 import { Marker } from "react-map-gl";
 import { IconCto } from "../Icon";
 
-const MarkerMapBox = () => {
+const MarkerMapBox = ({ latitude, longitude, type, onClick }) => {
   return (
     <Marker
-      latitude={-29.589622}
-      longitude={-50.808668}
+      latitude={latitude}
+      longitude={longitude}
       className={`text-green-500`}
+      onClick={onClick}
     >
       <IconCto />
     </Marker>
