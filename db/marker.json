@@ -1245,6 +1245,28 @@
       "color": "black",
       "status": "true",
       "id": "ptkIBVQ"
+    },
+    {
+      "name": "CTO 02",
+      "marca": "filco",
+      "capacidade": 16,
+      "lat": -29.595140697266896,
+      "lng": -50.82404444500431,
+      "type": "cte",
+      "color": "black",
+      "status": "true",
+      "id": "0XRr0M2"
+    },
+    {
+      "name": "CTO 02",
+      "marca": "filco",
+      "capacidade": 16,
+      "lat": -29.58394838315728,
+      "lng": -50.822149194159906,
+      "type": "cto",
+      "color": "black",
+      "status": "true",
+      "id": "V8QXWaD"
     }
   ]
 }

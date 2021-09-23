@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import NavRouter from "./Router";
 import Sidebar from "./components/template/Sidebar";
 import { ActiveContext, MapContext } from "./components/data/ActiveContext";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 function App() {
   const [cto, setCto] = useState("cto");
