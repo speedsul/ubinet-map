@@ -3,12 +3,7 @@ import axios from "axios";
 import MapGL, { FullscreenControl } from "react-map-gl";
 import MarkerMapBox from "./mapBox/MarkerMapbox";
 import { ActiveContext, MapContext } from "./data/ActiveContext";
-import {
-  Editor,
-  DrawPolygonMode,
-  EditingMode,
-  DrawLineStringMode,
-} from "react-map-gl-draw";
+import { Editor, EditingMode, DrawLineStringMode } from "react-map-gl-draw";
 import { getFeatureStyle, getEditHandleStyle } from "./style";
 
 export default function MapBox({ mapDatas }) {
@@ -43,15 +38,22 @@ export default function MapBox({ mapDatas }) {
   };
   const dataMarkerGet = async () => {
     let marker = await axios.get(`http://localhost:4000/marker`);
+    console.log(marker);
 
     setDataMarker(marker.data);
   };
   const renderMarker = () => {
     return dataMarker?.map((mapData) => (
       <MarkerMapBox
+        key={mapData.id}
         latitude={mapData.lat}
         longitude={mapData.lng}
-        key={mapData.id}
+        name={mapData.name}
+        marca={mapData.marca}
+        capacidade={mapData.capacidade}
+        tipo={mapData.type}
+        color={mapData.color}
+        status={mapData.status}
       />
     ));
   };
@@ -72,13 +74,15 @@ export default function MapBox({ mapDatas }) {
     }
   }, []);
   const drawTools = (
-    <div className="mapboxgl-ctrl-top-left">
+    <div className="mapboxgl-ctrl-top-left pl-8">
       <div className="mapboxgl-ctrl-group mapboxgl-ctrl">
         <button
-          className="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_polygon"
+          className="mapbox-gl-draw_ctrl-draw-btn bg-black"
           title="Polygon tool (p)"
           onClick={() => setMode(new DrawLineStringMode())}
-        />
+        >
+          Teste
+        </button>
         <button
           className="mapbox-gl-draw_ctrl-draw-btn mapbox-gl-draw_trash"
           title="Delete"
@@ -89,11 +93,12 @@ export default function MapBox({ mapDatas }) {
   );
   useEffect(() => {
     dataMarkerGet();
-  }, [dataMarker]);
+  }, []);
 
   const renderMap = () => (
     <MapGL
       {...viewport}
+      className="z-0"
       mapboxApiAccessToken={process.env.REACT_APP_MAP_BOX}
       mapStyle={mapType}
       width="100%"
